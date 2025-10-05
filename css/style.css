@@ -1,0 +1,292 @@
+*{
+padding: 0px;
+margin: 0px;
+box-sizing: border-box;
+}
+header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    padding: 0px 30px;
+    padding-right: 60px;
+    align-items: center;
+    background-color: #d4c6af;
+    font-size: 16px;
+}
+img{
+    width: 170px;
+    height: auto;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+
+}
+header nav ul li a{
+color:#25344F;
+font-weight: 800;
+margin-left: 20px;
+text-decoration: none;
+font-size: 18px;
+padding: 10px 15px; 
+
+}
+
+main{
+    background-color: #d4c6af;
+    display: flex;/*flex comportamiento de renglon*/
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#inicio{
+   background-image: url(../images/inicio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Roboto Slab", serif;
+    font-size: 30px;
+    min-width: 700px;
+    height: 400px;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-start; 
+    padding-left: 50px; 
+    color: #d4c6af;
+    padding-top: 35px;
+}
+
+#inicio h1 span{
+    font-size: 1.5em; 
+    font-weight: 900; 
+    display: flex;
+    color: #ae9f87;
+
+}
+
+
+aside ul li{
+    list-style: none;
+}
+
+aside{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0,0, 0.1);  
+}
+
+#contenedor{
+    align-items: flex-start;
+    padding: 20px;
+    display: flex;
+    padding: 20px 40px;
+    background: #d4c6af;
+    gap: 40px;
+}
+#idiomas{
+    background-color:#617891;
+    flex: 3;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+}
+#oferta-idiomas{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+#oferta-idiomas article {
+    background: #D5B893;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    margin: 30px;
+    color:#25344F;
+    cursor: pointer;/*cuando el cursor este en la imagen se haga una manita*/
+    transition: 0.5s;/* tiempo del transform*/
+}
+
+#oferta-idiomas article:hover{
+    transform:translateY(-20px) /*negativo para que suba*/;/*para que al momento de tocar un elemento de la lista se mueva*/
+}
+#oferta-idiomas article img {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#idiomas h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style:initial;
+    color: #D5B893;
+}
+
+#descuentos{
+    background-color: #617891;
+    color: #D5B893;
+}
+
+#descuentos img{
+    height: 350px;
+    width: 180px;
+    gap: 20px;
+
+}
+footer{
+     background-color: #f0d7b0 ;
+      text-align: center;
+      color: #25344F;
+      padding: 30px;
+}
+            
+.fab{
+    color:#25344F;
+    font-size: 50 px;
+    margin:40px;
+}
+.fab:hover{
+     color:#D5B893;
+}
+
+@media (max-width: 1024px) {
+
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    header img {
+        width: 140px;
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav ul li a {
+        margin: 10px;
+        font-size: 16px;
+    }
+
+    #inicio {
+        min-width: auto;
+        height: 300px;
+        padding-left: 20px;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    #contenedor {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #oferta-idiomas {
+        flex-wrap: wrap;
+    }
+
+    #oferta-idiomas article img {
+        width: 150px;
+        height: 150px;
+    }
+
+    aside {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #descuentos img {
+        width: 100px;
+        height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        margin: 5px 0;
+        font-size: 15px;
+    }
+
+    #inicio {
+        height: 250px;
+        font-size: 18px;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+
+    #inicio h1 {
+        line-height: 1.2;
+    }
+
+    #inicio h1 span {
+        font-size: 1.2em;
+    }
+
+    #contenedor {
+        padding: 10px;
+    }
+
+    #idiomas {
+        padding: 15px;
+    }
+
+    #oferta-idiomas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #oferta-idiomas article {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    #oferta-idiomas article img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    aside {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #descuentos img {
+        width: 80px;
+        height: auto;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .fab {
+        font-size: 30px;
+        margin: 10px;
+    }
+}
+
+
+
+
